@@ -27,7 +27,35 @@
         header {
             border-right: 1px solid rgb(216, 216, 216);
             padding: 8px;
-            width: 30%;
+            flex: 0 0 30%;
+            transition: flex-basis 0.2s ease;
+
+            button {
+                display: grid;
+                place-items: center;
+                width: 28px;
+                height: 28px;
+                margin-bottom: 8px;
+                border: 0;
+                border-radius: 50%;
+                background: transparent;
+                color: rgb(25, 165, 165);
+                font: inherit;
+                font-size: 1.25rem;
+                line-height: 1;
+                cursor: pointer;
+                transition: background-color 0.15s ease;
+
+                &:hover {
+                    background-color: rgba(25, 165, 165, 0.12);
+                }
+
+                &:focus-visible {
+                    outline: 2px solid rgb(25, 165, 165);
+                    outline-offset: 2px;
+                }
+            }
+
             h1 {
                 font-size: 1.5rem;
                 color: rgb(26, 172, 172);
@@ -56,7 +84,17 @@
             }
         }
 
+        header.is-collapsed {
+            flex-basis: 48px;
+
+            .sidebar-content {
+                display: none;
+            }
+        }
+
         main {
+            flex: 1;
+            min-width: 0;
             padding: 8px;
 
             section {
@@ -75,23 +113,27 @@
 
 <body>
     <header>
-        <h1>Nombre del juego</h1>
-        <h2>Game design document</h2>
-        <nav>
-            <h4>Índice</h2>
-                <a href="#vision-general">Visión general</a>
-                <a href="#experiencia-del-jugador">Experiencia del jugador</a>
-                <a href="#historia-y-narrativa">Historia y narrativa</a>
-                <a href="#personajes">Personajes</a>
-                <a href="#gameplay-y-bucle-principal">Gameplay y bucle principal</a>
-                <a href="#mecanicas-y-sistemas">Mecánicas y sistemas</a>
-                <a href="#diseno-de-niveles-y-escenarios">Diseño de niveles y escenarios</a>
-                <a href="#misiones-y-objetivos">Misiones y objetivos</a>
-                <a href="#direccion-artistica">Dirección artística</a>
-                <a href="#audio-y-musica">Audio y música</a>
-                <a href="#interfaz-y-experiencia-de-usuario">Interfaz y experiencia de usuario</a>
-                <a href="#alcance-y-planificacion">Alcance y planificación</a>
-        </nav>
+        <button id="sidebar-toggle" type="button" aria-controls="sidebar-content" aria-expanded="true"
+            aria-label="Contraer barra lateral">«</button>
+        <div class="sidebar-content" id="sidebar-content">
+            <h1>Nombre del juego</h1>
+            <h2>Game design document</h2>
+            <nav>
+                <h4>Índice</h2>
+                    <a href="#vision-general">Visión general</a>
+                    <a href="#experiencia-del-jugador">Experiencia del jugador</a>
+                    <a href="#historia-y-narrativa">Historia y narrativa</a>
+                    <a href="#personajes">Personajes</a>
+                    <a href="#gameplay-y-bucle-principal">Gameplay y bucle principal</a>
+                    <a href="#mecanicas-y-sistemas">Mecánicas y sistemas</a>
+                    <a href="#diseno-de-niveles-y-escenarios">Diseño de niveles y escenarios</a>
+                    <a href="#misiones-y-objetivos">Misiones y objetivos</a>
+                    <a href="#direccion-artistica">Dirección artística</a>
+                    <a href="#audio-y-musica">Audio y música</a>
+                    <a href="#interfaz-y-experiencia-de-usuario">Interfaz y experiencia de usuario</a>
+                    <a href="#alcance-y-planificacion">Alcance y planificación</a>
+            </nav>
+        </div>
     </header>
 
 
@@ -221,6 +263,20 @@
         </section>
     </main>
 
+    <script>
+        const sidebar = document.querySelector("header");
+        const sidebarToggle = document.querySelector("#sidebar-toggle");
+
+        sidebarToggle.addEventListener("click", () => {
+            const isCollapsed = sidebar.classList.toggle("is-collapsed");
+            sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+            sidebarToggle.setAttribute(
+                "aria-label",
+                isCollapsed ? "Expandir barra lateral" : "Contraer barra lateral"
+            );
+            sidebarToggle.textContent = isCollapsed ? "»" : "«";
+        });
+    </script>
 </body>
 
 </html>
