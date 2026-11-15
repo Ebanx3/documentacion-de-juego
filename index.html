@@ -19,7 +19,8 @@
 
         body {
             font-family: "TypeMachine", sans-serif;
-            max-width: 1024px;
+            --body-max-width: 1200px;
+            max-width: var(--body-max-width);
             margin: auto;
             --sidebar-width: min(250px, 42vw);
         }
@@ -31,7 +32,7 @@
         header {
             position: fixed;
             top: 0;
-            left: max(0px, calc((100% - 1024px) / 2));
+            left: max(0px, calc((100% - var(--body-max-width)) / 2));
             width: var(--sidebar-width);
             height: 100vh;
             overflow-y: auto;
