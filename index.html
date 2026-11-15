@@ -21,14 +21,25 @@
             font-family: "TypeMachine", sans-serif;
             max-width: 1024px;
             margin: auto;
-            display: flex;
+            --sidebar-width: min(250px, 42vw);
+        }
+
+        body.sidebar-collapsed {
+            --sidebar-width: 48px;
         }
 
         header {
+            position: fixed;
+            top: 0;
+            left: max(0px, calc((100% - 1024px) / 2));
+            width: var(--sidebar-width);
+            height: 100vh;
+            overflow-y: auto;
             border-right: 1px solid rgb(216, 216, 216);
             padding: 8px;
-            flex: 0 0 30%;
-            transition: flex-basis 0.2s ease;
+            background: white;
+            z-index: 1;
+            transition: width 0.2s ease;
 
             button {
                 display: grid;
@@ -85,17 +96,15 @@
         }
 
         header.is-collapsed {
-            flex-basis: 48px;
-
             .sidebar-content {
                 display: none;
             }
         }
 
         main {
-            flex: 1;
-            min-width: 0;
+            margin-left: var(--sidebar-width);
             padding: 8px;
+            transition: margin-left 0.2s ease;
 
             section {
                 margin: 2vh 0;
@@ -315,6 +324,7 @@
 
         sidebarToggle.addEventListener("click", () => {
             const isCollapsed = sidebar.classList.toggle("is-collapsed");
+            document.body.classList.toggle("sidebar-collapsed", isCollapsed);
             sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
             sidebarToggle.setAttribute(
                 "aria-label",
