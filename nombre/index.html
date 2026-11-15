@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "TypeMachine";
+            src: url("Type Machine.ttf") format("truetype");
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "TypeMachine", sans-serif;
+            max-width: 1024px;
+            margin: auto;
+            display: flex;
+        }
+
+        header {
+            border-right: 1px solid rgb(216, 216, 216);
+            padding: 8px;
+            width: 30%;
+            h1 {
+                font-size: 1.5rem;
+                color: rgb(26, 172, 172);
+                font-weight: bold;
+            }
+
+            h2 {
+                font-size: 1rem;
+                color: rgb(31, 185, 185);
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: fit-content;
+                padding: 8px;
+
+                a {
+                    font-size: .8rem;
+                    border-radius: 0.25rem;
+                    text-decoration: underline;
+                    font-weight: 600;
+                    color: rgb(25, 165, 165);
+                }
+            }
+        }
+
+        main {
+            padding: 8px;
+
+            section {
+                margin: 2vh 0;
+
+                .col2 {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    gap: 8px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Nombre del juego</h1>
+        <h2>Game design document</h2>
+        <nav>
+            <h4>Índice</h2>
+                <a href="#vision-general">Visión general</a>
+                <a href="#experiencia-del-jugador">Experiencia del jugador</a>
+                <a href="#historia-y-narrativa">Historia y narrativa</a>
+                <a href="#personajes">Personajes</a>
+                <a href="#gameplay-y-bucle-principal">Gameplay y bucle principal</a>
+                <a href="#mecanicas-y-sistemas">Mecánicas y sistemas</a>
+                <a href="#diseno-de-niveles-y-escenarios">Diseño de niveles y escenarios</a>
+                <a href="#misiones-y-objetivos">Misiones y objetivos</a>
+                <a href="#direccion-artistica">Dirección artística</a>
+                <a href="#audio-y-musica">Audio y música</a>
+                <a href="#interfaz-y-experiencia-de-usuario">Interfaz y experiencia de usuario</a>
+                <a href="#alcance-y-planificacion">Alcance y planificación</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="vision-general">
+            <h3>Visión general</h3>
+            <!-- Qué juego vamos a crear y qué lo hace interesante. -->
+
+            <div class="col2">
+                <span>Nombre del juego:</span>
+                <span>por definir</span>
+                <span>Descripción:</span>
+                <p>Juego estilo RPG clásico con combates, dialogos</p>
+                <span>Género principal y sub-géneros:</span>
+                <span>-</span>
+                <span>Plataforma:</span>
+                <span>-</span>
+                <span>Perspectiva y estética:</span>
+                <span>Top-down, PixelArt</span>
+                <span>Principal atractivo o elemento diferenciador:</span>
+                <span>-</span>
+                <span>Tipo de jugadoresa los que está dirigido:</span>
+                <span>-</span>
+                <span>Juegos de referencia:</span>
+                <span>-</span>
+            </div>
+        </section>
+
+        <section id="experiencia-del-jugador">
+            <h3>Experiencia del jugador</h3>
+            <!-- Qué queremos que sienta y experimente el jugador. -->
+        </section>
+
+        <section id="historia-y-narrativa">
+            <h3>Historia y narrativa</h3>
+            <!-- Argumento, mundo, acontecimientos y diálogos. -->
+        </section>
+
+        <section id="personajes">
+            <h3>Personajes</h3>
+            <!-- Protagonistas, secundarios, aliados y enemigos. -->
+        </section>
+
+        <section id="gameplay-y-bucle-principal">
+            <h3>Gameplay y bucle principal</h3>
+            <!-- Qué hace el jugador durante una partida. -->
+        </section>
+
+        <section id="mecanicas-y-sistemas">
+            <h3>Mecánicas y sistemas</h3>
+            <!-- Combate, movimiento, interacción, inventario y progresión. -->
+        </section>
+
+        <section id="diseno-de-niveles-y-escenarios">
+            <h3>Diseño de niveles y escenarios</h3>
+            <!-- Mapas, zonas, exploración y distribución. -->
+        </section>
+
+        <section id="misiones-y-objetivos">
+            <h3>Misiones y objetivos</h3>
+            <!-- Cómo se estructura el avance de la historia. -->
+        </section>
+
+        <section id="direccion-artistica">
+            <h3>Dirección artística</h3>
+            <!-- Estética, personajes, escenarios y animaciones. -->
+        </section>
+
+        <section id="audio-y-musica">
+            <h3>Audio y música</h3>
+            <!-- Ambientación sonora, efectos y música. -->
+        </section>
+
+        <section id="interfaz-y-experiencia-de-usuario">
+            <h3>Interfaz y experiencia de usuario</h3>
+            <!-- HUD, menús, diálogos y controles. -->
+        </section>
+
+        <section id="alcance-y-planificacion">
+            <h3>Alcance y planificación</h3>
+            <!-- Qué vamos a producir, herramientas y prioridades. -->
+        </section>
+    </main>
+
+</body>
+
+</html>
