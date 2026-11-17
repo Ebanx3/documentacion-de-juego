@@ -5,120 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @font-face {
-            font-family: "TypeMachine";
-            src: url("./resources/Type\ Machine.ttf") format("truetype");
-        }
-
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            font-family: "TypeMachine", sans-serif;
-            --body-max-width: 1200px;
-            max-width: var(--body-max-width);
-            margin: auto;
-            --sidebar-width: min(250px, 42vw);
-        }
-
-        body.sidebar-collapsed {
-            --sidebar-width: 48px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: max(0px, calc((100% - var(--body-max-width)) / 2));
-            width: var(--sidebar-width);
-            height: 100vh;
-            overflow-y: auto;
-            border-right: 1px solid rgb(216, 216, 216);
-            padding: 8px;
-            background: white;
-            z-index: 1;
-            transition: width 0.2s ease;
-
-            button {
-                display: grid;
-                place-items: center;
-                width: 28px;
-                height: 28px;
-                margin-bottom: 8px;
-                border: 0;
-                border-radius: 50%;
-                background: transparent;
-                color: rgb(25, 165, 165);
-                font: inherit;
-                font-size: 1.25rem;
-                line-height: 1;
-                cursor: pointer;
-                transition: background-color 0.15s ease;
-
-                &:hover {
-                    background-color: rgba(25, 165, 165, 0.12);
-                }
-
-                &:focus-visible {
-                    outline: 2px solid rgb(25, 165, 165);
-                    outline-offset: 2px;
-                }
-            }
-
-            h1 {
-                font-size: 1.5rem;
-                color: rgb(26, 172, 172);
-                font-weight: bold;
-            }
-
-            h2 {
-                font-size: 1rem;
-                color: rgb(31, 185, 185);
-            }
-
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                width: fit-content;
-                padding: 8px;
-
-                a {
-                    font-size: .8rem;
-                    border-radius: 0.25rem;
-                    text-decoration: underline;
-                    font-weight: 600;
-                    color: rgb(25, 165, 165);
-                }
-            }
-        }
-
-        header.is-collapsed {
-            .sidebar-content {
-                display: none;
-            }
-        }
-
-        main {
-            margin-left: var(--sidebar-width);
-            padding: 8px;
-            transition: margin-left 0.2s ease;
-
-            section {
-                margin: 2vh 0;
-
-                .col2 {
-                    font-size: .8rem;
-                    display: grid;
-                    grid-template-columns: 2fr 3fr;
-                    gap: 8px;
-                }
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">k
 </head>
 
 <body>
@@ -264,7 +151,7 @@
                 <span>Despues de haber jugado, recorrido lugares, hecho misiones el jugador llega a la ciudad del castillo, entrena y al tiempo se entera que atacaron su pueblo natal. Al ir allí se entera que su padre se sacrificó para que su madre y hermano puedieran huir con vida. <strong>El juego entra en una segunda etapa mucho más oscura</strong></span>
 
                 <span>Motivo por el que el protagonista se involucra en el conflicto:</span>
-                <span>El jugador debe recorrer todo rastro que encuentre en busqueda de su familia, revisitando lugares ahora con tonos mucho más oscuros y nuevo más aterradores.</span>
+                <span>El jugador debe recorrer todo rastro que encuentre en busqueda de su familia, revisitando lugares ahora con tonos mucho más oscuros y nuevos más aterradores.</span>
 
                 <span>Objetivo principal del protagonista:</span>
                 <span>Encontrar a su familia.</span>
@@ -301,6 +188,10 @@
         <section id="diseno-de-niveles-y-escenarios">
             <h3>Diseño de niveles y escenarios</h3>
             <!-- Mapas, zonas, exploración y distribución. -->
+             <p>El juego cuenta con un mapa, que define ubicaciónes y sub-ubicaciones.
+                Las cuales se describen en el siguiente enlace -> <a href="./pages/locations.html">Ubicaciones</a>
+             </p>
+             
         </section>
 
         <section id="misiones-y-objetivos">
