@@ -1,0 +1,86 @@
+[
+  {
+    "nombre": "Protagonista",
+    "rol": "Aspirante de soldado",
+    "vinculos": "",
+    "caracteristicas": "Joven, valiente y entusiasta",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Aldric",
+    "rol": "Agricultor",
+    "vinculos": "Padre del protagonista",
+    "caracteristicas": "Protector, experimentado y reservado",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Isolde",
+    "rol": "Ama de casa",
+    "vinculos": "Madre del protagonista",
+    "caracteristicas": "Es una mujer tranquila, aunque algo desconfiada de los desconocidos y tiene un fuerte instinto de supervivencia",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Kael",
+    "rol": "Niño",
+    "vinculos": "Hermano menor del protagonista",
+    "caracteristicas": "Alegre, inocente y travieso.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Garrick",
+    "rol": "Herrero",
+    "vinculos": "Es viudo y vive con su perro",
+    "caracteristicas": "Hombre robusto, directo y de pocas palabras.\nTiene fama de ser gruñón, pero siempre ayuda a los vecinos..",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Martha",
+    "rol": "Comerciante",
+    "vinculos": "Es amiga de Isolde y suele intercambiar productos con los agricultores y el herrero.",
+    "caracteristicas": "Mujer sociable, astuta y muy conversadora.\nSiempre sabe quién necesita algo y quién está teniendo problemas.\nTiene un talento especial para negociar.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Brom",
+    "rol": "Pescador veterano",
+    "vinculos": "Abuelo de Finn",
+    "caracteristicas": "Anciano tranquilo, bromista y algo supersticioso.\nConoce el lago y el río mejor que nadie.\nSale a pescar antes del amanecer.\nCuenta historias sobre criaturas que supuestamente habitan las profundidades.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Finn",
+    "rol": "Joven pescador",
+    "vinculos": "Nieto de Brom y amigo del protagonista.",
+    "caracteristicas": "Entusiasta, impulsivo y aventurero.Ayuda a su abuelo con la pesca.\nSueña con viajar y conocer otros lugares.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Agnes",
+    "rol": "Panadera",
+    "vinculos": "",
+    "caracteristicas": "Mujer amable, maternal y muy trabajadora.\nTiene una pequeña rivalidad amistosa con Martha por los precios.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Rowan",
+    "rol": "Guardia",
+    "vinculos": "",
+    "caracteristicas": "Serio, responsable y algo desconfiado.Es el encargado de vigilar las entradas y patrullar los alrededores.\nAbandonó la vida militar después de un acontecimiento que prefiere no recordar.",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Thomas",
+    "rol": "Alcalde",
+    "vinculos": "Padre de Lily",
+    "caracteristicas": "Hombre educado, diplomático y bastante prudente.\nLleva muchos años gobernando Windmere.\nCorrupto?",
+    "lugar donde aparece": "Windmere"
+  },
+  {
+    "nombre": "Lily",
+    "rol": "Curandera",
+    "vinculos": "Hija de Thomas",
+    "caracteristicas": "Conoce las propiedades de plantas medicinales.\nLe gusta explorar los alrededores del pueblo.\nTiene fascinación por los animales y las historias de aventuras.",
+    "lugar donde aparece": "Windmere"
+  }
+]

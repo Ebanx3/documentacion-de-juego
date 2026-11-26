@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Beyond the Kingdom</h1>
+    <h2>Personajes</h2>
+    <p id="characters-status" role="status" aria-live="polite">Cargando personajes...</p>
+    <section id="characters-list" class="character-list" aria-label="Lista de personajes"></section>
+
+    <script>
+        const status = document.getElementById("characters-status");
+        const charactersList = document.getElementById("characters-list");
+
+        async function showCharacters() {
+            try {
+                const response = await fetch("../resources/characters.json");
+                if (!response.ok) {
+                    throw new Error(`No se pudo cargar el archivo (${response.status}).`);
+                }
+
+                const characters = await response.json();
+                if (!Array.isArray(characters)) {
+                    throw new Error("El archivo de personajes no tiene un formato válido.");
+                }
+
+                characters.forEach(character => {
+                    const article = document.createElement("article");
+                    article.className = "character-card";
+
+                    const name = document.createElement("h3");
+                    name.textContent = character.nombre + " - (" + character.rol + ")";
+                    article.appendChild(name);
+
+                    const details = document.createElement("dl");
+                    [
+                        ["Vínculos", character.vinculos || "Sin vínculos especificados."],
+                        ["Características", character.caracteristicas],
+                        ["Lugar donde aparece", character["lugar donde aparece"]]
+                    ].forEach(([label, value]) => {
+                        const term = document.createElement("dt");
+                        term.textContent = label;
+                        details.appendChild(term);
+
+                        const description = document.createElement("dd");
+                        description.textContent = value || "Sin información.";
+                        details.appendChild(description);
+                    });
+
+                    article.appendChild(details);
+                    charactersList.appendChild(article);
+                });
+
+                status.textContent = `${characters.length} personajes cargados.`;
+            } catch (error) {
+                status.textContent = `Error al cargar los personajes: ${error.message}`;
+            }
+        }
+
+        showCharacters();
+    </script>
+</body>
+</html>

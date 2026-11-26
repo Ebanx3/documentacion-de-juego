@@ -2,452 +2,461 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">k
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Kingdom</title>
+  <link rel="stylesheet" href="style.css">k
 </head>
 
 <body>
-    <header>
-        <button id="sidebar-toggle" type="button" aria-controls="sidebar-content" aria-expanded="true"
-            aria-label="Contraer barra lateral">«</button>
-        <div class="sidebar-content" id="sidebar-content">
-            <h1>Nombre del juego</h1>
-            <h2>Game design document</h2>
-            <nav>
-                <h4>Índice</h2>
-                    <a href="#vision-general">Visión general</a>
-                    <a href="#experiencia-del-jugador">Experiencia del jugador</a>
-                    <a href="#historia-y-narrativa">Historia y narrativa</a>
-                    <a href="#personajes">Personajes</a>
-                    <a href="#gameplay-y-bucle-principal">Gameplay y bucle principal</a>
-                    <a href="#mecanicas-y-sistemas">Mecánicas y sistemas</a>
-                    <a href="#diseno-de-niveles-y-escenarios">Diseño de niveles y escenarios</a>
-                    <a href="#misiones-y-objetivos">Misiones y objetivos</a>
-                    <a href="#direccion-artistica">Dirección artística</a>
-                    <a href="#audio-y-musica">Audio y música</a>
-                    <a href="#interfaz-y-experiencia-de-usuario">Interfaz y experiencia de usuario</a>
-                    <a href="#alcance-y-planificacion">Alcance y planificación</a>
-            </nav>
+  <header>
+    <button id="sidebar-toggle" type="button" aria-controls="sidebar-content" aria-expanded="true"
+      aria-label="Contraer barra lateral">«</button>
+    <div class="sidebar-content" id="sidebar-content">
+      <h1>Beyond the Kingdom</h1>
+      <h2>Game design document</h2>
+      <nav>
+        <h4>Índice</h2>
+          <a href="#vision-general">Visión general</a>
+          <a href="#experiencia-del-jugador">Experiencia del jugador</a>
+          <a href="#historia-y-narrativa">Historia y narrativa</a>
+          <a href="#personajes">Personajes</a>
+          <a href="#gameplay-y-bucle-principal">Gameplay y bucle principal</a>
+          <a href="#mecanicas-y-sistemas">Mecánicas y sistemas</a>
+          <a href="#diseno-de-niveles-y-escenarios">Diseño de niveles y escenarios</a>
+          <a href="#misiones-y-objetivos">Misiones y objetivos</a>
+          <a href="#direccion-artistica">Dirección artística</a>
+          <a href="#audio-y-musica">Audio y música</a>
+          <a href="#interfaz-y-experiencia-de-usuario">Interfaz y experiencia de usuario</a>
+          <a href="#alcance-y-planificacion">Alcance y planificación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="vision-general">
+      <h3>Visión general</h3>
+      <!-- Qué juego vamos a crear y qué lo hace interesante. -->
+
+      <div class="col2">
+        <span>Nombre del juego:</span>
+        <span>por definir</span>
+        <span>Descripción:</span>
+        <div>
+          <p>Videojuego RPG de fantasía medieval. El jugador recorrerá diferentes ubicaciones, enfrentará
+            criaturas y enemigos, completará misiones y desarrollará las habilidades de su personaje
+            mediante un
+            sistema de progresión por niveles.</p>
+          <br>
+          <p>La experiencia estará inspirada en los RPG clásicos, priorizando la exploración, el combate, la
+            obtención de recompensas y el crecimiento del personaje.</p>
+          </p>
         </div>
-    </header>
+        <span>Género principal y sub-géneros:</span>
+        <span>RPG, WRPG</span>
+        <span>Plataforma:</span>
+        <span>PC</span>
+        <span>Perspectiva y estética:</span>
+        <span>Top-down, PixelArt</span>
+        <span>Principal atractivo o elemento diferenciador:</span>
+        <p>A medida que avance la aventura, se desarrollará una narrativa con elementos de misterio y una
+          ambientación progresivamente más oscura, invitando al jugador a descubrir los secretos del mundo y
+          los acontecimientos que rodean su aventura.</p>
+        <span>Tipo de jugadores a los que está dirigido:</span>
+        <span>Jugadores aficionados a los RPG clásicos que disfrutan de explorar mundos de fantasía, combatir
+          criaturas, completar misiones y desarrollar progresivamente las habilidades de sus
+          personajes.</span>
+        <span>Juegos de referencia:</span>
+        <ul>
+          <li>Secrets of Grindea - Estructura RPG, niveles y progresión</li>
+          <li>Hyper Light Drifter - Ambientación, misterio y estética</li>
+          <li>CrossCode - Combate, exploración e interacción</li>
+          <li>Children of Morta - Narrativa y fantasía oscura</li>
+          <li>Moonlighter - Mazmorras, recompensas y equipamiento</li>
+        </ul>
+      </div>
+    </section>
 
-    <main>
-        <section id="vision-general">
-            <h3>Visión general</h3>
-            <!-- Qué juego vamos a crear y qué lo hace interesante. -->
+    <section id="experiencia-del-jugador">
+      <h3>Experiencia del jugador</h3>
+      <!-- Qué queremos que sienta y experimente el jugador. -->
+      <div class="col2">
+        <span>Papel que interpreta el jugador:</span>
+        <p>El jugador asumirá el papel de un aventurero que recorrerá un mundo de fantasía medieval,
+          enfrentándose a diferentes amenazas, completando misiones y descubriendo los secretos que esconde el
+          mundo. A través de sus acciones y decisiones, desarrollará las capacidades de su personaje y
+          avanzará progresivamente en su aventura.</p>
 
-            <div class="col2">
-                <span>Nombre del juego:</span>
-                <span>por definir</span>
-                <span>Descripción:</span>
-                <div>
-                    <p>Videojuego RPG de fantasía medieval. El jugador recorrerá diferentes ubicaciones, enfrentará
-                        criaturas y enemigos, completará misiones y desarrollará las habilidades de su personaje
-                        mediante un
-                        sistema de progresión por niveles.</p>
-                    <br>
-                    <p>La experiencia estará inspirada en los RPG clásicos, priorizando la exploración, el combate, la
-                        obtención de recompensas y el crecimiento del personaje.</p>
-                    </p>
-                </div>
-                <span>Género principal y sub-géneros:</span>
-                <span>RPG, WRPG</span>
-                <span>Plataforma:</span>
-                <span>PC</span>
-                <span>Perspectiva y estética:</span>
-                <span>Top-down, PixelArt</span>
-                <span>Principal atractivo o elemento diferenciador:</span>
-                <p>A medida que avance la aventura, se desarrollará una narrativa con elementos de misterio y una
-                    ambientación progresivamente más oscura, invitando al jugador a descubrir los secretos del mundo y
-                    los acontecimientos que rodean su aventura.</p>
-                <span>Tipo de jugadores a los que está dirigido:</span>
-                <span>Jugadores aficionados a los RPG clásicos que disfrutan de explorar mundos de fantasía, combatir
-                    criaturas, completar misiones y desarrollar progresivamente las habilidades de sus
-                    personajes.</span>
-                <span>Juegos de referencia:</span>
-                <ul>
-                    <li>Secrets of Grindea - Estructura RPG, niveles y progresión</li>
-                    <li>Hyper Light Drifter - Ambientación, misterio y estética</li>
-                    <li>CrossCode - Combate, exploración e interacción</li>
-                    <li>Children of Morta - Narrativa y fantasía oscura</li>
-                    <li>Moonlighter - Mazmorras, recompensas y equipamiento</li>
-                </ul>
+        <span>¿Qué debería sentir mientras juega?</span>
+        <div>
+          <p>Se busca generar una sensación de aventura y descubrimiento, acompañada de curiosidad por conocer
+            el mundo y sus habitantes. A medida que avance la historia, se introducirán sensaciones de
+            incertidumbre, tensión y misterio mediante los acontecimientos, personajes y escenarios.</p>
+          <p>El jugador debería sentir satisfacción al superar desafíos, derrotar enemigos, mejorar su
+            personaje y descubrir nuevos lugares.</p>
+        </div>
+
+        <span>¿Qué importancia tendrán la exploración, el combate y los diálogos?</span>
+        <div>Los tres elementos tendrán un papel importante y complementario dentro de la experiencia.
+
+          <ul>
+            <li>Exploración: permitirá descubrir nuevas ubicaciones, encontrar objetos, conocer personajes y
+              descubrir secretos del mundo. Será uno de los principales medios para incentivar el
+              descubrimiento.</li>
+            <li>Combate: será uno de los pilares del gameplay. Permitirá enfrentar criaturas y enemigos,
+              obtener recompensas, conseguir experiencia y desarrollar al personaje.</li>
+            <li>Diálogos: permitirán conocer a los habitantes del mundo, recibir misiones, descubrir
+              información sobre los acontecimientos y desarrollar la narrativa.</li>
+          </ul>
+        </div>
+
+        <span>Ritmo de la experiencia de juego:</span>
+        <div>
+          <p>El juego tendrá un ritmo dinámico pero equilibrado, alternando momentos de exploración,
+            interacción con personajes y enfrentamientos.</p>
+          <p>Los combates y desafíos aportarán intensidad a la experiencia, mientras que la exploración y los
+            diálogos permitirán momentos de tranquilidad para descubrir el mundo y desarrollar la narrativa.
+          </p>
+          <p>A medida que avance la aventura, se buscará incrementar progresivamente la dificultad y la
+            tensión narrativa, introduciendo nuevos enemigos, desafíos y acontecimientos.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="historia-y-narrativa">
+      <h3>Historia y narrativa</h3>
+      <!-- Argumento, mundo, acontecimientos y diálogos. -->
+      <div class="col2">
+        <span>Descripcion del mundo:</span>
+        <div>
+          <p>El videojuego transcurre en un mundo de fantasía medieval, compuesto por diferentes regiones y
+            asentamientos que el jugador podrá explorar durante su aventura.</p>
+          <p>El mundo estará habitado por distintas comunidades, criaturas y seres fantásticos. Existirán
+            pueblos, bosques, ruinas, mazmorras y otras ubicaciones que ofrecerán diferentes experiencias de
+            exploración y combate.</p>
+          <p>La ambientación tendrá un tono misterioso y progresivamente oscuro. A través de los escenarios,
+            sus habitantes y los acontecimientos que ocurran durante la aventura, se buscará transmitir la
+            sensación de que el mundo esconde secretos que el jugador podrá descubrir a medida que avanza.
+          </p>
+        </div>
+
+        <span>Epoca en la que transcurre:</span>
+        <p>La historia estará ambientada en una época de inspiración medieval, caracterizada por la presencia de reinos,
+          aldeas, castillos, asentamientos rurales y estructuras feudales.</p>
+
+        <span>Aconticimientos importantes previos al comienzo:</span>
+        <p>El jugador habitaba en un pueblo (nombre) en los limites del reino (nombre), con sus padres y hermano menor.
+          El deja el poblado con dirección a la ciudad real, con el objetivo de convertirse en soldado.</p>
+
+        <span>Conflicto principal:</span>
+        <span>Despues de haber jugado, recorrido lugares, hecho misiones el jugador llega a la ciudad del castillo,
+          entrena y al tiempo se entera que atacaron su pueblo natal. Al ir allí se entera que su padre se sacrificó
+          para que su madre y hermano puedieran huir con vida. <strong>El juego entra en una segunda etapa mucho más
+            oscura</strong></span>
+
+        <span>Motivo por el que el protagonista se involucra en el conflicto:</span>
+        <span>El jugador debe recorrer todo rastro que encuentre en busqueda de su familia, revisitando lugares ahora
+          con tonos mucho más oscuros y nuevos más aterradores.</span>
+
+        <span>Objetivo principal del protagonista:</span>
+        <span>Encontrar a su familia.</span>
+
+        <span>Obstáculos que deberá superar:</span>
+        <span>Deberá enfrentarse a diversos enemigos, recorrer y buscar en muchos lugares por indicios del paradero de
+          su familia.</span>
+
+        <span>Existirán misterios?</span>
+        <span>Si, el vinculo entre el reino y el grupo que ataco a su pueblo natal, que paso con su madre, que paso con
+          su hermano, etc</span>
+
+        <span>La historia tendra decisiones que afecten su desarrollo?</span>
+        <span>Si, completar cuando las tengamos xD</span>
+
+        <span>¿Qué tipo de final tendrá? ¿Uno definido o varios posibles?</span>
+        <span>Serán en principio 2 o 3 finales en base a algunas decisiones cruciales que tome el jugador</span>
+      </div>
+    </section>
+
+    <section id="personajes">
+      <h3>Personajes</h3>
+      <!-- Protagonistas, secundarios, aliados y enemigos. -->
+       <span>Lista de personajes: <a href="./pages/characters.html">Personajes</a></span>
+    </section>
+
+    <section id="gameplay-y-bucle-principal">
+      <h3>Gameplay y bucle principal</h3>
+      <!-- Qué hace el jugador durante una partida. -->
+    </section>
+
+    <section id="mecanicas-y-sistemas">
+      <h3>Mecánicas y sistemas</h3>
+      <!-- Combate, movimiento, interacción, inventario y progresión. -->
+    </section>
+
+    <section id="diseno-de-niveles-y-escenarios">
+      <h3>Diseño de niveles y escenarios</h3>
+      <!-- Mapas, zonas, exploración y distribución. -->
+      <p>El juego cuenta con un mapa, que define ubicaciónes y sub-ubicaciones.
+        Las cuales se describen en el siguiente enlace -> <a href="./pages/locations.html">Ubicaciones</a>
+      </p>
+
+    </section>
+
+    <section id="misiones-y-objetivos">
+      <h3>Misiones y objetivos</h3>
+      <!-- Cómo se estructura el avance de la historia. -->
+    </section>
+
+    <section id="direccion-artistica">
+      <h3>Dirección artística</h3>
+      <!-- Estética, personajes, escenarios y animaciones. -->
+      <details>
+        <summary>Paleta de colores</summary>
+
+        <style>
+          .palette {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+          }
+
+          .palette-category h3 {
+            margin-bottom: 10px;
+            color: #333;
+          }
+
+          .palette-colors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+          }
+
+          .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 85px;
+            gap: 5px;
+          }
+
+          .color-swatch {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+          }
+
+          .color-name {
+            font-size: 12px;
+            text-align: center;
+          }
+
+          .color-hex {
+            font-size: 11px;
+            color: #777;
+          }
+        </style>
+
+        <div class="palette">
+
+          <!-- 1. Naturaleza y vegetación -->
+          <section class="palette-category">
+            <h3>1. Naturaleza y vegetación</h3>
+            <div class="palette-colors">
+              <div class="color-item">
+                <div class="color-swatch" style="background:#263C32"></div>
+                <span class="color-name">Bosque oscuro</span>
+                <span class="color-hex">#263C32</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#385943"></div>
+                <span class="color-name">Verde bosque</span>
+                <span class="color-hex">#385943</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#58764B"></div>
+                <span class="color-name">Vegetación</span>
+                <span class="color-hex">#58764B</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#82965A"></div>
+                <span class="color-name">Musgo</span>
+                <span class="color-hex">#82965A</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#B2A66B"></div>
+                <span class="color-name">Hierba seca</span>
+                <span class="color-hex">#B2A66B</span>
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section id="experiencia-del-jugador">
-            <h3>Experiencia del jugador</h3>
-            <!-- Qué queremos que sienta y experimente el jugador. -->
-            <div class="col2">
-                <span>Papel que interpreta el jugador:</span>
-                <p>El jugador asumirá el papel de un aventurero que recorrerá un mundo de fantasía medieval,
-                    enfrentándose a diferentes amenazas, completando misiones y descubriendo los secretos que esconde el
-                    mundo. A través de sus acciones y decisiones, desarrollará las capacidades de su personaje y
-                    avanzará progresivamente en su aventura.</p>
-
-                <span>¿Qué debería sentir mientras juega?</span>
-                <div>
-                    <p>Se busca generar una sensación de aventura y descubrimiento, acompañada de curiosidad por conocer
-                        el mundo y sus habitantes. A medida que avance la historia, se introducirán sensaciones de
-                        incertidumbre, tensión y misterio mediante los acontecimientos, personajes y escenarios.</p>
-                    <p>El jugador debería sentir satisfacción al superar desafíos, derrotar enemigos, mejorar su
-                        personaje y descubrir nuevos lugares.</p>
-                </div>
-
-                <span>¿Qué importancia tendrán la exploración, el combate y los diálogos?</span>
-                <div>Los tres elementos tendrán un papel importante y complementario dentro de la experiencia.
-
-                    <ul>
-                        <li>Exploración: permitirá descubrir nuevas ubicaciones, encontrar objetos, conocer personajes y
-                            descubrir secretos del mundo. Será uno de los principales medios para incentivar el
-                            descubrimiento.</li>
-                        <li>Combate: será uno de los pilares del gameplay. Permitirá enfrentar criaturas y enemigos,
-                            obtener recompensas, conseguir experiencia y desarrollar al personaje.</li>
-                        <li>Diálogos: permitirán conocer a los habitantes del mundo, recibir misiones, descubrir
-                            información sobre los acontecimientos y desarrollar la narrativa.</li>
-                    </ul>
-                </div>
-
-                <span>Ritmo de la experiencia de juego:</span>
-                <div>
-                    <p>El juego tendrá un ritmo dinámico pero equilibrado, alternando momentos de exploración,
-                        interacción con personajes y enfrentamientos.</p>
-                    <p>Los combates y desafíos aportarán intensidad a la experiencia, mientras que la exploración y los
-                        diálogos permitirán momentos de tranquilidad para descubrir el mundo y desarrollar la narrativa.
-                    </p>
-                    <p>A medida que avance la aventura, se buscará incrementar progresivamente la dificultad y la
-                        tensión narrativa, introduciendo nuevos enemigos, desafíos y acontecimientos.</p>
-                </div>
-
+          <!-- 2. Tierra, madera y construcciones -->
+          <section class="palette-category">
+            <h3>2. Tierra, madera y construcciones</h3>
+            <div class="palette-colors">
+              <div class="color-item">
+                <div class="color-swatch" style="background:#382820"></div>
+                <span class="color-name">Marrón oscuro</span>
+                <span class="color-hex">#382820</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#60402D"></div>
+                <span class="color-name">Madera</span>
+                <span class="color-hex">#60402D</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#865B3D"></div>
+                <span class="color-name">Tierra</span>
+                <span class="color-hex">#865B3D</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#AD8054"></div>
+                <span class="color-name">Cuero</span>
+                <span class="color-hex">#AD8054</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#C6A477"></div>
+                <span class="color-name">Arena</span>
+                <span class="color-hex">#C6A477</span>
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section id="historia-y-narrativa">
-            <h3>Historia y narrativa</h3>
-            <!-- Argumento, mundo, acontecimientos y diálogos. -->
-            <div class="col2">
-                <span>Descripcion del mundo:</span>
-                <div>
-                    <p>El videojuego transcurre en un mundo de fantasía medieval, compuesto por diferentes regiones y
-                        asentamientos que el jugador podrá explorar durante su aventura.</p>
-                    <p>El mundo estará habitado por distintas comunidades, criaturas y seres fantásticos. Existirán
-                        pueblos, bosques, ruinas, mazmorras y otras ubicaciones que ofrecerán diferentes experiencias de
-                        exploración y combate.</p>
-                    <p>La ambientación tendrá un tono misterioso y progresivamente oscuro. A través de los escenarios,
-                        sus habitantes y los acontecimientos que ocurran durante la aventura, se buscará transmitir la
-                        sensación de que el mundo esconde secretos que el jugador podrá descubrir a medida que avanza.
-                    </p>
-                </div>
-
-                <span>Epoca en la que transcurre:</span>
-                <p>La historia estará ambientada en una época de inspiración medieval, caracterizada por la presencia de reinos, aldeas, castillos, asentamientos rurales y estructuras feudales.</p>
-
-                <span>Aconticimientos importantes previos al comienzo:</span>
-                <p>El jugador habitaba en un pueblo (nombre) en los limites del reino (nombre), con sus padres y hermano menor. El deja el poblado con dirección a la ciudad real, con el objetivo de convertirse en soldado.</p>
-
-                <span>Conflicto principal:</span>
-                <span>Despues de haber jugado, recorrido lugares, hecho misiones el jugador llega a la ciudad del castillo, entrena y al tiempo se entera que atacaron su pueblo natal. Al ir allí se entera que su padre se sacrificó para que su madre y hermano puedieran huir con vida. <strong>El juego entra en una segunda etapa mucho más oscura</strong></span>
-
-                <span>Motivo por el que el protagonista se involucra en el conflicto:</span>
-                <span>El jugador debe recorrer todo rastro que encuentre en busqueda de su familia, revisitando lugares ahora con tonos mucho más oscuros y nuevos más aterradores.</span>
-
-                <span>Objetivo principal del protagonista:</span>
-                <span>Encontrar a su familia.</span>
-
-                <span>Obstáculos que deberá superar:</span>
-                <span>Deberá enfrentarse a diversos enemigos, recorrer y buscar en muchos lugares por indicios del paradero de su familia.</span>
-
-                <span>Existirán misterios?</span>
-                <span>Si, el vinculo entre el reino y el grupo que ataco a su pueblo natal, que paso con su madre, que paso con su hermano, etc</span>
-
-                <span>La historia tendra decisiones que afecten su desarrollo?</span>
-                <span>Si, completar cuando las tengamos xD</span>
-
-                <span>¿Qué tipo de final tendrá? ¿Uno definido o varios posibles?</span>
-                <span>Serán en principio 2 o 3 finales en base a algunas decisiones cruciales que tome el jugador</span>
+          <!-- 3. Piedra y arquitectura -->
+          <section class="palette-category">
+            <h3>3. Piedra y arquitectura</h3>
+            <div class="palette-colors">
+              <div class="color-item">
+                <div class="color-swatch" style="background:#30343A"></div>
+                <span class="color-name">Piedra oscura</span>
+                <span class="color-hex">#30343A</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#50565B"></div>
+                <span class="color-name">Pizarra</span>
+                <span class="color-hex">#50565B</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#747778"></div>
+                <span class="color-name">Piedra</span>
+                <span class="color-hex">#747778</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#A2A19A"></div>
+                <span class="color-name">Caliza</span>
+                <span class="color-hex">#A2A19A</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#D0C8B5"></div>
+                <span class="color-name">Piedra clara</span>
+                <span class="color-hex">#D0C8B5</span>
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section id="personajes">
-            <h3>Personajes</h3>
-            <!-- Protagonistas, secundarios, aliados y enemigos. -->
-        </section>
+          <!-- 4. Cielos y agua -->
+          <section class="palette-category">
+            <h3>4. Cielos y agua</h3>
+            <div class="palette-colors">
+              <div class="color-item">
+                <div class="color-swatch" style="background:#202E40"></div>
+                <span class="color-name">Noche</span>
+                <span class="color-hex">#202E40</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#344B65"></div>
+                <span class="color-name">Azul oscuro</span>
+                <span class="color-hex">#344B65</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#52758A"></div>
+                <span class="color-name">Agua</span>
+                <span class="color-hex">#52758A</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#83A3AD"></div>
+                <span class="color-name">Cielo</span>
+                <span class="color-hex">#83A3AD</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#C2C7BB"></div>
+                <span class="color-name">Niebla</span>
+                <span class="color-hex">#C2C7BB</span>
+              </div>
+            </div>
+          </section>
 
-        <section id="gameplay-y-bucle-principal">
-            <h3>Gameplay y bucle principal</h3>
-            <!-- Qué hace el jugador durante una partida. -->
-        </section>
+          <!-- 5. Detalles, objetos y magia -->
+          <section class="palette-category">
+            <h3>5. Detalles, objetos y magia</h3>
+            <div class="palette-colors">
+              <div class="color-item">
+                <div class="color-swatch" style="background:#9D3F36"></div>
+                <span class="color-name">Rojo</span>
+                <span class="color-hex">#9D3F36</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#C27642"></div>
+                <span class="color-name">Naranja</span>
+                <span class="color-hex">#C27642</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#D6B45E"></div>
+                <span class="color-name">Oro</span>
+                <span class="color-hex">#D6B45E</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#7764A5"></div>
+                <span class="color-name">Violeta</span>
+                <span class="color-hex">#7764A5</span>
+              </div>
+              <div class="color-item">
+                <div class="color-swatch" style="background:#66A6A0"></div>
+                <span class="color-name">Magia</span>
+                <span class="color-hex">#66A6A0</span>
+              </div>
+            </div>
+          </section>
+          <a href="./resources//MedievalFantasy.png" download="medieval_fantasy_palette.png"> Descargar paleta</a>
 
-        <section id="mecanicas-y-sistemas">
-            <h3>Mecánicas y sistemas</h3>
-            <!-- Combate, movimiento, interacción, inventario y progresión. -->
-        </section>
+        </div>
 
-        <section id="diseno-de-niveles-y-escenarios">
-            <h3>Diseño de niveles y escenarios</h3>
-            <!-- Mapas, zonas, exploración y distribución. -->
-             <p>El juego cuenta con un mapa, que define ubicaciónes y sub-ubicaciones.
-                Las cuales se describen en el siguiente enlace -> <a href="./pages/locations.html">Ubicaciones</a>
-             </p>
-             
-        </section>
+      </details>
+    </section>
 
-        <section id="misiones-y-objetivos">
-            <h3>Misiones y objetivos</h3>
-            <!-- Cómo se estructura el avance de la historia. -->
-        </section>
+    <section id="audio-y-musica">
+      <h3>Audio y música</h3>
+      <!-- Ambientación sonora, efectos y música. -->
+    </section>
 
-        <section id="direccion-artistica">
-            <h3>Dirección artística</h3>
-            <!-- Estética, personajes, escenarios y animaciones. -->
-             <details>
-                <summary>Paleta de colores</summary>
+    <section id="interfaz-y-experiencia-de-usuario">
+      <h3>Interfaz y experiencia de usuario</h3>
+      <!-- HUD, menús, diálogos y controles. -->
+    </section>
 
-<style>
-  .palette {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-family: Arial, sans-serif;
-  }
+    <section id="alcance-y-planificacion">
+      <h3>Alcance y planificación</h3>
+      <!-- Qué vamos a producir, herramientas y prioridades. -->
+    </section>
+  </main>
 
-  .palette-category h3 {
-    margin-bottom: 10px;
-    color: #333;
-  }
+  <script>
+    const sidebar = document.querySelector("header");
+    const sidebarToggle = document.querySelector("#sidebar-toggle");
 
-  .palette-colors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .color-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 85px;
-    gap: 5px;
-  }
-
-  .color-swatch {
-    width: 55px;
-    height: 55px;
-    border-radius: 6px;
-  }
-
-  .color-name {
-    font-size: 12px;
-    text-align: center;
-  }
-
-  .color-hex {
-    font-size: 11px;
-    color: #777;
-  }
-</style>
-
-<div class="palette">
-
-  <!-- 1. Naturaleza y vegetación -->
-  <section class="palette-category">
-    <h3>1. Naturaleza y vegetación</h3>
-    <div class="palette-colors">
-      <div class="color-item">
-        <div class="color-swatch" style="background:#263C32"></div>
-        <span class="color-name">Bosque oscuro</span>
-        <span class="color-hex">#263C32</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#385943"></div>
-        <span class="color-name">Verde bosque</span>
-        <span class="color-hex">#385943</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#58764B"></div>
-        <span class="color-name">Vegetación</span>
-        <span class="color-hex">#58764B</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#82965A"></div>
-        <span class="color-name">Musgo</span>
-        <span class="color-hex">#82965A</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#B2A66B"></div>
-        <span class="color-name">Hierba seca</span>
-        <span class="color-hex">#B2A66B</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. Tierra, madera y construcciones -->
-  <section class="palette-category">
-    <h3>2. Tierra, madera y construcciones</h3>
-    <div class="palette-colors">
-      <div class="color-item">
-        <div class="color-swatch" style="background:#382820"></div>
-        <span class="color-name">Marrón oscuro</span>
-        <span class="color-hex">#382820</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#60402D"></div>
-        <span class="color-name">Madera</span>
-        <span class="color-hex">#60402D</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#865B3D"></div>
-        <span class="color-name">Tierra</span>
-        <span class="color-hex">#865B3D</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#AD8054"></div>
-        <span class="color-name">Cuero</span>
-        <span class="color-hex">#AD8054</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#C6A477"></div>
-        <span class="color-name">Arena</span>
-        <span class="color-hex">#C6A477</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Piedra y arquitectura -->
-  <section class="palette-category">
-    <h3>3. Piedra y arquitectura</h3>
-    <div class="palette-colors">
-      <div class="color-item">
-        <div class="color-swatch" style="background:#30343A"></div>
-        <span class="color-name">Piedra oscura</span>
-        <span class="color-hex">#30343A</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#50565B"></div>
-        <span class="color-name">Pizarra</span>
-        <span class="color-hex">#50565B</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#747778"></div>
-        <span class="color-name">Piedra</span>
-        <span class="color-hex">#747778</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#A2A19A"></div>
-        <span class="color-name">Caliza</span>
-        <span class="color-hex">#A2A19A</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#D0C8B5"></div>
-        <span class="color-name">Piedra clara</span>
-        <span class="color-hex">#D0C8B5</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Cielos y agua -->
-  <section class="palette-category">
-    <h3>4. Cielos y agua</h3>
-    <div class="palette-colors">
-      <div class="color-item">
-        <div class="color-swatch" style="background:#202E40"></div>
-        <span class="color-name">Noche</span>
-        <span class="color-hex">#202E40</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#344B65"></div>
-        <span class="color-name">Azul oscuro</span>
-        <span class="color-hex">#344B65</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#52758A"></div>
-        <span class="color-name">Agua</span>
-        <span class="color-hex">#52758A</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#83A3AD"></div>
-        <span class="color-name">Cielo</span>
-        <span class="color-hex">#83A3AD</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#C2C7BB"></div>
-        <span class="color-name">Niebla</span>
-        <span class="color-hex">#C2C7BB</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Detalles, objetos y magia -->
-  <section class="palette-category">
-    <h3>5. Detalles, objetos y magia</h3>
-    <div class="palette-colors">
-      <div class="color-item">
-        <div class="color-swatch" style="background:#9D3F36"></div>
-        <span class="color-name">Rojo</span>
-        <span class="color-hex">#9D3F36</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#C27642"></div>
-        <span class="color-name">Naranja</span>
-        <span class="color-hex">#C27642</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#D6B45E"></div>
-        <span class="color-name">Oro</span>
-        <span class="color-hex">#D6B45E</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#7764A5"></div>
-        <span class="color-name">Violeta</span>
-        <span class="color-hex">#7764A5</span>
-      </div>
-      <div class="color-item">
-        <div class="color-swatch" style="background:#66A6A0"></div>
-        <span class="color-name">Magia</span>
-        <span class="color-hex">#66A6A0</span>
-      </div>
-    </div>
-</section>
-<a href="./resources//MedievalFantasy.png" download="medieval_fantasy_palette.png"> Descargar paleta</a>
-
-</div>
-
-             </details>
-        </section>
-
-        <section id="audio-y-musica">
-            <h3>Audio y música</h3>
-            <!-- Ambientación sonora, efectos y música. -->
-        </section>
-
-        <section id="interfaz-y-experiencia-de-usuario">
-            <h3>Interfaz y experiencia de usuario</h3>
-            <!-- HUD, menús, diálogos y controles. -->
-        </section>
-
-        <section id="alcance-y-planificacion">
-            <h3>Alcance y planificación</h3>
-            <!-- Qué vamos a producir, herramientas y prioridades. -->
-        </section>
-    </main>
-
-    <script>
-        const sidebar = document.querySelector("header");
-        const sidebarToggle = document.querySelector("#sidebar-toggle");
-
-        sidebarToggle.addEventListener("click", () => {
-            const isCollapsed = sidebar.classList.toggle("is-collapsed");
-            document.body.classList.toggle("sidebar-collapsed", isCollapsed);
-            sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
-            sidebarToggle.setAttribute(
-                "aria-label",
-                isCollapsed ? "Expandir barra lateral" : "Contraer barra lateral"
-            );
-            sidebarToggle.textContent = isCollapsed ? "»" : "«";
-        });
-    </script>
+    sidebarToggle.addEventListener("click", () => {
+      const isCollapsed = sidebar.classList.toggle("is-collapsed");
+      document.body.classList.toggle("sidebar-collapsed", isCollapsed);
+      sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+      sidebarToggle.setAttribute(
+        "aria-label",
+        isCollapsed ? "Expandir barra lateral" : "Contraer barra lateral"
+      );
+      sidebarToggle.textContent = isCollapsed ? "»" : "«";
+    });
+  </script>
 </body>
 
 </html>

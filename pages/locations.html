@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +7,66 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Nombre del juego</h1>
+    <h1>Beyond the Kingdom</h1>
     <h2>Ubicaciones</h2>
-    <details>
-        <summary>(Nombre)</summary>
-        <div class="col2">
-            <strong>Descripción:</strong>
-            <p>Es el pueblo inicial donde aparece el jugador y su familia. Un lugar tranquilo, de pocas casas y pocos habitantes. </p>
-            
-            <strong>Sub-ubicaciones:</strong>
-            <ul class="sublocations">
-                <li>Casa del jugador</li>
-                <li>-</li>
-            </ul>
+    <p id="locations-status" role="status" aria-live="polite">Cargando ubicaciones...</p>
+    <section id="locations-list" class="locations-list" aria-label="Lista de ubicaciones"></section>
 
-            <strong>Ubicaciones con las que conecta:</strong>
-            <ul class="sublocations">
-                <li>Entrada sur del camino (nombre?) - norte</li>
-                <li>Orilla del rio - este</li>
-                <li>Plantaciones - oeste</li>
-            </ul>
-        </div>
-    </details>
+    <script>
+        const status = document.getElementById("locations-status");
+        const locationsList = document.getElementById("locations-list");
 
-     <details>
-        <summary>Entrada sur del camino (nombre?)</summary>
-        <div class="col2">
-            <strong>Descripción:</strong>
-            <p>Acceso sur al camino que atraviesa el bosque. </p>
-            
-            <strong>Sub-ubicaciones:</strong>
-            <ul class="sublocations">
-                <li>-</li>
-            </ul>
+        async function showLocations() {
+            try {
+                const response = await fetch("../resources/locations.json");
+                if (!response.ok) {
+                    throw new Error(`No se pudo cargar el archivo (${response.status}).`);
+                }
 
-            <strong>Ubicaciones con las que conecta:</strong>
-            <ul class="sublocations">
-                <li>Camino en el bosque (nombre?) - norte</li>
-                <li>Aldea inicial - sur</li>
-                <li>otras?</li>
-            </ul>
-        </div>
-    </details>
+                const locations = await response.json();
+                if (!Array.isArray(locations)) {
+                    throw new Error("El archivo de ubicaciones no tiene un formato válido.");
+                }
+
+                const locationsById = new Map(locations.map(location => [location.id, location]));
+
+                locations.forEach(location => {
+                    const article = document.createElement("article");
+                    article.className = "location-card";
+
+                    const name = document.createElement("h3");
+                    name.textContent = location.nombre;
+                    article.appendChild(name);
+
+                    const description = document.createElement("p");
+                    description.textContent = location.descripcion || "Sin descripción disponible.";
+                    article.appendChild(description);
+
+                    const connectedIds = Array.isArray(location.conectado_a) ? location.conectado_a : [];
+                    if (connectedIds.length > 0) {
+                        const connectionsTitle = document.createElement("h4");
+                        connectionsTitle.textContent = "Ubicaciones conectadas";
+                        article.appendChild(connectionsTitle);
+
+                        const connections = document.createElement("ul");
+                        connectedIds.forEach(id => {
+                            const item = document.createElement("li");
+                            item.textContent = locationsById.get(id)?.nombre || `Ubicación ${id}`;
+                            connections.appendChild(item);
+                        });
+                        article.appendChild(connections);
+                    }
+
+                    locationsList.appendChild(article);
+                });
+
+                status.textContent = `${locations.length} ubicaciones cargadas.`;
+            } catch (error) {
+                status.textContent = `Error al cargar las ubicaciones: ${error.message}`;
+            }
+        }
+
+        showLocations();
+    </script>
 </body>
 </html>

@@ -122,3 +122,45 @@ main {
 .sublocations {
     margin-left: 36px;
 }
+
+.locations-list,
+.character-list {
+  display: grid;
+  gap: 16px;
+  margin: 16px 8px;
+}
+
+.location-card,
+.character-card {
+  padding: 16px;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 8px;
+  font-size: .8rem;
+}
+
+.location-card h3 {
+  margin-bottom: 8px;
+  color: rgb(26, 172, 172);
+}
+
+.location-card h4 {
+  margin-top: 12px;
+}
+
+.location-card ul {
+  margin: 4px 0 0 24px;
+}
+
+.character-card h3 {
+  margin-bottom: 8px;
+  color: rgb(26, 172, 172);
+}
+
+.character-card dt {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.character-card dd {
+  white-space: pre-line;
+}

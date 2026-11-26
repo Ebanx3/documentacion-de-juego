@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nombre": "Windmere",
+    "descripcion": "Pueblo inicial del personaje, ubicada al sur del reino de Arvendell.\n Es un pueblo de poco habitantes donde reina la paz, y cuya principales actividades son la agricultura y pezca.",
+    "conectado_a": [2, 3]
+  },
+  {
+    "id": 2,
+    "nombre": "Entrada sur al camino que atraviesa el bosque",
+    "descripcion": "El camino del bosque sirve conexión entre el pueblo Windmere al sur del reino, Dunwich y el castillo de Arvendell.",
+    "conectado_a": [1, 4]
+  },
+  {
+    "id": 3,
+    "nombre": "Costa del río",
+    "descripcion": "Costa en la zona sur del reino, proxima a Windmere, sobre el río Greymoor.\n Lugar donde algunos pueblerinos acuden a realizar la pezca del día.",
+    "conectado_a": [1]
+  },
+  {
+    "id": 4,
+    "nombre": "Camino en el bosque",
+    "descripcion": "Punto medio del camino del bosque, comunmente patrullado por soldados del reino para evitar asaltos a carrozas de comerciantes de parte de criaturas como orcos o trolls que habitan en bosque.",
+    "conectado_a": [2, 5,6]
+  },
+  {
+    "id": 5,
+    "nombre": "Bosque Fernwood",
+    "descripcion": "Bosque frondoso situado en medio del reino, habitado por orcos, trolls, delincuentes entre otros.",
+    "conectado_a": [4]
+  },
+  {
+    "id": 6,
+    "nombre": "Entrada norte al camino que atraviesa el bosque",
+    "descripcion": "Punto cercano al  cruce de caminos que une el pueblo Dunwich, el camino que atraviesa el bosque hacia el sur y en dirección al oeste el camino que va al castillo.",
+    "conectado_a": [4, 7]
+  },
+  {
+    "id": 7,
+    "nombre": "Cruce de caminos",
+    "descripcion": "Cruce de caminos que conducen al castillo, el pueblo costero Dunwich y al acceso norte del camino que atraviesa el bosque.",
+    "conectado_a": [6, 8, 9]
+  },
+  {
+    "id": 8,
+    "nombre": "Dunwich",
+    "descripcion": "Pueblo costero, ubicada al este del reino.\n Es un pueblo que se situa sobre al río, con conexión maritima, lo que favorece el flujo de personaes, más que nada a comerciar diversos productos en el mercado.",
+    "conectado_a": [7, 11]
+  },
+  {
+    "id": 9,
+    "nombre": "Castillo de Arvendell",
+    "descripcion": "Punto central del reino, lugar donde habita la familia real, nobles y otros campesinos.\n Además es el lugar desde el que se dirige toda actividad en el reino, como economía y seguridad.",
+    "conectado_a": [7,10]
+  },
+  {
+    "id": 10,
+    "nombre":"Cueva",
+    "descripcion": "",
+    "conectado_a": [9]
+  },
+  {
+    "id": 11,
+    "nombre":"Orilla este del río Greymoor",
+    "descripcion": "",
+    "conectado_a": [8]
+  }
+]
